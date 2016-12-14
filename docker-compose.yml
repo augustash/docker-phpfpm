@@ -1,0 +1,11 @@
+version: "2"
+services:
+  phpfpm:
+    build:
+      context: .
+    image: augustash/phpfpm:5.6
+    labels:
+      - "com.augustash.description=August Ash PHP-FPM Image"
+      - "com.augustash.development-only"
+    ports:
+      - "9000"

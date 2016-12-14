@@ -1,0 +1,14 @@
+;;;;;;;;;;;;;;;;;;;;;
+; FPM Configuration ;
+;;;;;;;;;;;;;;;;;;;;;
+
+[global]
+pid = /var/run/php-fpm.pid
+error_log = /dev/stderr
+daemonize = no
+
+;;;;;;;;;;;;;;;;;;;;
+; Pool Definitions ;
+;;;;;;;;;;;;;;;;;;;;
+
+include=/config/php/pool.d/*.conf

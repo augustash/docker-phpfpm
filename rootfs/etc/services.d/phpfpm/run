@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv sh
+
+exec \
+    "/usr/sbin/php-fpm$PHP_VERSION" -c /config/php/ -y /config/php/php-fpm.conf

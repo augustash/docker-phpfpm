@@ -1,0 +1,10 @@
+[template]
+# Conifguration template
+src     = "php-fpm.conf.tmpl"
+# Rendered configuration file location
+dest    = "/config/php/php-fpm.conf"
+
+# File ownership
+owner   = "ash"
+group   = "ash"
+mode    = "0644"
