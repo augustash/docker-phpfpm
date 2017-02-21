@@ -17,7 +17,7 @@ docker-compose up -d
 The image used for this container provides the ability to run single, one-off commands. Run a single command in the following manner:
 
 ```bash
-docker run --rm -it augustash/phpfpm:5.6 php -v
+docker run --rm -it augustash/phpfpm:7.0 php -v
 ```
 
 The example syntax will:
@@ -30,7 +30,7 @@ The example syntax will:
 For single-use PHP commands, you can skip the `s6` process like this:
 
 ```bash
-docker run --rm -it --entrypoint /usr/bin/php augustash/phpfpm:5.6 --version
+docker run --rm -it --entrypoint /usr/bin/php augustash/phpfpm:7.0 --version
 ```
 
 ## Configuration
@@ -43,7 +43,7 @@ If you need to change configuration values, the best option is to mount your own
 docker run --rm -it \
     -v $(pwd)/conf/www.conf:/config/php/pool.d/www.conf
     -v $(pwd)/conf/php.ini:/config/php/php.ini
-    augustash/phpfpm:5.6 php -i
+    augustash/phpfpm:7.0 php -i
 ```
 
 ### User/Group Identifiers
@@ -74,4 +74,4 @@ The following variables can be set and will change how the container behaves. Yo
 
 - `PUID`=501
 - `PGID`=20
-- `PHP_VERSION`=5.6
+- `PHP_VERSION`=7.0

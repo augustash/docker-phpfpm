@@ -4,7 +4,7 @@ MAINTAINER Pete McWilliams <pmcwilliams@augustash.com>
 ARG DEBIAN_FRONTEND="noninteractive"
 
 # environment
-ENV PHP_VERSION 5.6
+ENV PHP_VERSION 7.0
 ENV APTLIST \
     php${PHP_VERSION} \
     php${PHP_VERSION}-bcmath \
